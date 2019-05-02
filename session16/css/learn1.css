@@ -1,0 +1,15 @@
+#mybox {
+	background-color: #ada;
+	font-size: 100px;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+p {
+	height: 50px;
+}
+#car {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
