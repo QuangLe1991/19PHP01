@@ -72,6 +72,6 @@ $(document).ready(function() {
     $.validator.addMethod("currentnumber", function() {
         var previousnumbervalue = $(".previousnumber").val();
         var currentnumbervalue = $(".currentnumber").val();
-        return previousnumbervalue <= currentnumbervalue;
+        return parseInt(previousnumbervalue) <= parseInt(currentnumbervalue);
     }, "*Current number should be greater than Previous number");
 });
