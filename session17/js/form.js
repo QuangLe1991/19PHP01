@@ -57,7 +57,8 @@ $(document).ready(function() {
             } else {
                 money = 100*1500 + 100*2000 + (totalnumber-200)*3000;
             }
-            $("#myform").append("SO TIEN PHAI NOP  :"+money+"<br>");            
+            // money = format_curency(money);
+            $("#myform").append("SO TIEN PHAI NOP  :"+format_curency(money)+"<br>");            
         }
     })
 
@@ -75,3 +76,8 @@ $(document).ready(function() {
         return parseInt(previousnumbervalue) <= parseInt(currentnumbervalue);
     }, "*Current number should be greater than Previous number");
 });
+
+function format_curency(a) {
+    a = a.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    return a;
+}
