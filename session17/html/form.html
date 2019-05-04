@@ -11,46 +11,49 @@
 		</div>
 		<div id="info">
 			<p>HO TEN : </p>
-			<input type="text" name="fullname" value="" >
+			<input class="name" type="text" name="fullname" value="" >
 		</div>
 		<div id="info">
 			<p>DIA CHI :</p> 
-			<input type="text" name="adress" value="">
+			<input class="adr" type="text" name="adress" value="">
 		</div>	
 		<div id="info">
 			<p>SDT :</p> 
-			<input type="number" name="phonenumber" value="">
+			<input class="phonenum" type="number" name="phonenumber" value="">
 		</div>	
 		<div id="info">
 			<div id="subinfo">
 				<p>NGAY DAU KY :</p>
-				<input type="date" name="firstday">
+				<input class="startdate" type="date" name="startday" value="">
 			</div>
 			<div id="subinfo">
 				<p>NGAY CUOI KY :</p>
-				<input type="date" name="lastday">
+				<input class="enddate" type="date" name="endday" value="">
 			</div>
 		</div>	
 		<div id="info">
 			<div id="subinfo">
 				<p>SO DAU KY :</p>
-				<input type="number" name="firstcount">
+				<input class="previousnumber" type="number" name="firstcount" value="">
 			</div>
 			<div id="subinfo">
 				<p>SO CUOI KY :</p>
-				<input type="number" name="lastcount">
+				<input class="currentnumber" type="number" name="lastcount" value="">
 			</div>
 		</div>
 		<div id="info">
-			<p>GHI CHU :</p> 
-			<input type="text" name="note" value="">
+			<p>GHI CHU 
+			   (OPTIONAL) :</p> 
+			<input class="Note" type="text" name="note" value="">
 		</div>	
 		<div id="submitbutton">
 			<button type="submit" value="Submit">Submit</button>
 		</div>
 	</form>
-
-
+	<div id="myform">
+		<h1>THONG TIN HOA DON DIEN</h1><br>
+		
+	</div>
 	<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
 	<!-- <script type="text/javascript" src="../js/jquery-1.12.4.js"></script> -->
 	<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
