@@ -57,7 +57,7 @@ $(document).ready(function() {
             } else {
                 money = 100*1500 + 100*2000 + (totalnumber-200)*3000;
             }
-            // money = format_curency(money);
+            // money.format_curency(money);
             $("#myform").append("SO TIEN PHAI NOP  :"+format_curency(money)+"<br>");            
         }
     })
@@ -78,6 +78,8 @@ $(document).ready(function() {
 });
 
 function format_curency(a) {
-    a = a.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    // var b = a.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+    a = a.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     return a;
 }
+document.write(format_curency(10000))
