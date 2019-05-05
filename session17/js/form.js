@@ -24,30 +24,31 @@ $(document).ready(function() {
         },
         submitHandler: function (form) {
             $("#formDemo").hide();
-            $("#myform").show();
+            $("#mybill").show();
             
             var name = $(".name").val();
-            $("#myform").append("HO VA TEN:"+name+"<br>");
+            $("#name_display").append(name);
             
             var adress = $(".adr").val();
-            $("#myform").append("DIA CHI  :"+adress+"<br>");
+            $("#adr_display").append(adress);
             
             var phonenum = $(".phonenum").val();
-            $("#myform").append("SO DIEN THOAI  :"+phonenum+"<br>");
+            $("#phnum_display").append(phonenum);
             
             var startdate = $(".startdate").val();
             var enddate = $(".enddate").val();
-            $("#myform").append("NGAY DAU KY  :"+startdate+"<br>");
-            $("#myform").append("NGAY CUOI KY  :"+enddate+"<br>");
+            $("#sd_display").append(startdate);
+            $("#ed_display").append(enddate);
 
             var previousnumber = $(".previousnumber").val();
             var currentnumber = $(".currentnumber").val();
-            $("#myform").append("SO DAU KY  :"+previousnumber+"<br>");
-            $("#myform").append("SO CUOI KY  :"+currentnumber+"<br>");
+            $("#pn_display").append(previousnumber);
+            $("#cn_display").append(currentnumber);
 
             var note = $(".Note").val();
-            $("#myform").append("GHI CHU  :"+note+"<br>");
-
+            $("#note_display").append(note);
+            
+            // Tinh tien dien tieu thu
             var totalnumber = currentnumber - previousnumber;
             var money;
             if (totalnumber < 100) {
@@ -58,7 +59,7 @@ $(document).ready(function() {
                 money = 100*1500 + 100*2000 + (totalnumber-200)*3000;
             }
             // money.format_curency(money);
-            $("#myform").append("SO TIEN PHAI NOP  :"+format_curency(money)+"<br>");            
+            $("#bill_display").append(format_curency(money));            
         }
     })
 
@@ -78,8 +79,5 @@ $(document).ready(function() {
 });
 
 function format_curency(a) {
-    // var b = a.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
-    a = a.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    return a;
+    return a.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 }
-document.write(format_curency(10000))
